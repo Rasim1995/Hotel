@@ -1,0 +1,406 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" dslVersion="1.0.0.0" Id="97041f65-7386-43c1-887b-aa2753aa5f7c" name="UMLClassDiagram" linkedPackageId="f42144a0-effe-4827-b680-1b884bef67ad" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+  <profileInstances>
+    <packageHasProfileInstances Id="617a8c3f-4c1b-4fe3-826f-84587ba70efc">
+      <profileInstance Id="5358e5d6-3fa6-4d58-b6b4-6589c2676482" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="a7c9295b-3ea7-4e56-a2e8-7c07745a5abb">
+      <profileInstance Id="64059ccd-9562-491a-83b8-59b64c41071c" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="ec3e2747-f9c1-43f3-8b8f-b2af01b333b9" name="User" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="c646255c-c104-49a9-b833-51e210e30a31" />
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="7c8f3dbd-3a51-4470-9288-fef5d0835b69" name="Employee" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="73928b81-866e-4659-a68c-afc0e83d8577" />
+        <generalsInternal>
+          <generalization Id="e86d6464-49ba-4141-a5b0-70af86bef106" isSubstitutable="false">
+            <classMoniker Id="ec3e2747-f9c1-43f3-8b8f-b2af01b333b9" LastKnownName="User" />
+            <elementDefinition Id="e055d725-b582-4973-8e8a-45329f89d169" />
+          </generalization>
+        </generalsInternal>
+        <ownedOperationsInternal>
+          <operation Id="24787731-5066-41e5-83ba-d5051f34bf1d" name="LookAListGuest" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="d1675d30-1697-41d9-8eb7-0f7ab6475513" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="58209d92-0b58-444d-85a6-1f6c19ee5dec" direction="Return" isUnique="false">
+                  <elementDefinition Id="6e62d9b8-dd48-46d6-949a-d88081adf415" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="c6a8f951-a45e-4cc3-8ce0-171a89754d9f" LastKnownName="ArrayList" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="d0a22f6a-06a5-430e-ad10-1a7f35bb493b" name="AddRoom" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="513144b0-f709-48ae-8f61-7df3c014534f" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="ab38cf6e-7212-4415-85c8-47881c622ed4" name="data" direction="In" isUnique="false">
+                  <elementDefinition Id="1108d1a7-03fa-44db-995b-6d51aba9e5de" />
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="6a7cd74e-3421-4f47-b2e5-312bc6479b3d" name="LookAListRooms" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="22aae5f4-0ff1-40d7-a626-3c38db3a8bd9" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="adb5d04d-ffa4-42d7-8fa0-2c82f450888f" direction="Return" isUnique="false">
+                  <elementDefinition Id="77c70f96-fea9-4383-b0e5-8baeec9dc085" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="90dd5b04-90dc-4081-a291-12e722194f1d" LastKnownName="Arraylist" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="74b24967-d752-4591-afcb-4544b79977c4" name="EditRoom" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="6031a194-0b7e-4ef2-9c4f-a15773dfa24b" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="ff262d7f-8319-4841-90c2-91ba35828ae6" name="editData" direction="In" isUnique="false">
+                  <elementDefinition Id="741e2401-cadc-4376-9793-dc05b123a414" />
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="876b36e6-29f3-41ad-8511-d1fa29a1bd93" name="RemoveGuest" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="fe18f854-272a-4fb8-8b65-c1a22708c5cf" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="a242965b-daef-4970-af3a-847d4229adab" name="id" direction="In" isUnique="false">
+                  <elementDefinition Id="9e1ac657-e8db-4023-8307-2138a68555ea" />
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="2fe132eb-9262-446c-8117-6224c1c749f9" name="Guest" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="e38dc68d-759e-432a-a748-f7e58e95e07c" />
+        <generalsInternal>
+          <generalization Id="badf18f8-8e10-4a2d-bc6c-346311a77f67" isSubstitutable="false">
+            <classMoniker Id="ec3e2747-f9c1-43f3-8b8f-b2af01b333b9" LastKnownName="User" />
+            <elementDefinition Id="5bbed3b5-350a-4e2f-ab67-8801e40875a8" />
+          </generalization>
+        </generalsInternal>
+        <ownedOperationsInternal>
+          <operation Id="ee180b0d-96b2-4af4-91db-e4c4990e5aee" name="ByARoom" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="70f017f6-1a80-4fad-a87c-8ab252b20183" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="2d6cd00b-a4b9-4502-8eea-c655a709a21a" name="idRoom" direction="In" isUnique="false">
+                  <elementDefinition Id="5e973f85-200c-455c-9ffb-0a651b8f2c75" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="8db03aa4-a0c9-44cc-add6-8e8adcaa792c" LastKnownName="int" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="cc81f1be-7900-4726-a20a-f38bfc58cf1b" name="CancelPurchase" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="d2badd5a-c936-4618-8d33-c1046ee40fa0" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="d77b13b0-1674-4e75-8f86-ca8e9713b25c" name="idPurchase" direction="In" isUnique="false">
+                  <elementDefinition Id="ae64d130-b93f-48ca-b7b6-cbb3cfcb7ada" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="8db03aa4-a0c9-44cc-add6-8e8adcaa792c" LastKnownName="int" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="8770df44-15bf-4172-b165-b058d1857930" name="LookAListRooms" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="ef8c010d-0ecb-4ba1-b24b-8966970446b4" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="cbf1c911-a620-46c1-ad89-67d4ec11926c" direction="Return" isUnique="false">
+                  <elementDefinition Id="a717f81a-cd89-41c1-bb42-09f83956f74b" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="90dd5b04-90dc-4081-a291-12e722194f1d" LastKnownName="Arraylist" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="10407b03-28cc-44ec-a1a9-ffcb6245cf25" name="LookAListPurchases" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="10ef09e8-fd92-4026-9cc5-bc63339dfffe" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="f032fd6d-58cf-4eb6-b4b2-a79c5480aee5" direction="Return" isUnique="false">
+                  <elementDefinition Id="15cd0bda-84f3-4d41-a28c-763a68b7e1ef" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="c6a8f951-a45e-4cc3-8ce0-171a89754d9f" LastKnownName="ArrayList" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="de8ffc62-aa0f-482f-a5c6-950db4a103ad" name="EditPurchase" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="49a99578-c113-49af-9b23-b2ba932ec729" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="3c2d1ae8-2171-4479-adf5-4b53852c4073" name="editData" direction="In" isUnique="false">
+                  <elementDefinition Id="46fdc28b-823b-4052-94f8-26e628c4887b" />
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="4c6f79b6-62f9-4069-aac6-b52a9bd01a5a" name="Administrator" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="466ae3f7-65c5-4d02-88a9-981cdbb75344" />
+        <generalsInternal>
+          <generalization Id="9a8cc589-3271-4754-9835-7097f5ea688d" isSubstitutable="false">
+            <classMoniker Id="ec3e2747-f9c1-43f3-8b8f-b2af01b333b9" LastKnownName="User" />
+            <elementDefinition Id="c3e49a11-c047-4a11-a3ae-bf638f837d47" />
+          </generalization>
+        </generalsInternal>
+        <ownedOperationsInternal>
+          <operation Id="926914a5-19e4-4609-9250-5cd58f7b2f86" name="RemoveEmployee" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="c35006b3-fb35-4214-9df5-64c9df4d9296" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="aa92d8b8-2712-4867-8596-4b2d1d84a522" name="id" direction="In" isUnique="false">
+                  <elementDefinition Id="1a4cc658-6689-4a17-b850-219f53999674" />
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="3cdc9166-7bb0-4afd-a430-2db45cc46b6e" name="LookAListGuest" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="95ae3a52-cc64-4081-bc7e-72e70532a8b0" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="7258f01b-c3db-41a7-b605-53b41f24997d" direction="Return" isUnique="false">
+                  <elementDefinition Id="6e3be76a-6c2d-4c24-9310-1d7cadb35664" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="c6a8f951-a45e-4cc3-8ce0-171a89754d9f" LastKnownName="ArrayList" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="1a1adf0d-28fa-4bd5-8630-3eab5d84c288" name="LookAListEmployee" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="648d8127-201f-4df1-9dec-570b27b8fed3" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="9b83d798-c4d9-4c7b-93af-dc3584872452" direction="Return" isUnique="false">
+                  <elementDefinition Id="08f9a23f-fbdc-4c45-a16a-40a1e7d53ae8" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="c6a8f951-a45e-4cc3-8ce0-171a89754d9f" LastKnownName="ArrayList" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="3030d728-c083-443f-b471-823aa228cbf9" name="RemoveGuest" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="d0168163-2111-4b62-b91e-2107f42627df" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="cc674f05-6190-412a-b19a-247d4d86da7c" name="id" direction="In" isUnique="false">
+                  <elementDefinition Id="14ff8527-2d3c-4d3b-935a-48dd21ed39e8" />
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="9145d8d3-8613-4348-b6d5-412a6a365c26" name="EditPostEmployee" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="1de5cb9a-fbe6-4e0e-be36-fc66243895c7" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="bb790418-78b4-496e-a34d-5bbbb28ec565" name="post" direction="In" isUnique="false">
+                  <elementDefinition Id="666818c6-2cce-48f6-a2a8-aa53a4c09d70" />
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="960c4c4a-9bec-48f6-acc5-0bdb92f1a3b8" name="Hotel" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="c9c7bb26-168c-43af-8114-6aacddeae9c1" />
+        <targetEnds>
+          <association Id="b88226a0-d07f-4acd-b304-3877615f299a" isDerived="false" sourceEndRoleName="Hotel" targetEndRoleName="Employee" isLeaf="false" isAbstract="false">
+            <classMoniker Id="7c8f3dbd-3a51-4470-9288-fef5d0835b69" LastKnownName="Employee" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="24424de6-f9e4-470e-9877-32e77de14a03" name="Hotel" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="Shared" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="b9e80283-7558-47ca-ad02-f36500bc800d" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="2d291ed6-80d7-4073-89a0-3730abd0b882" name="Employee" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <lowerValueInternal>
+                    <literalString Id="7153fb44-813e-4119-9dea-6328b905be67" name="Lower" value="*">
+                      <elementDefinition Id="e68a5192-ee0a-43d5-aa5e-382746649bee" />
+                    </literalString>
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString Id="76f72ed2-540c-4635-b94d-ed3ea6429a84" name="Upper" value="*">
+                      <elementDefinition Id="2ad4f052-7c5f-4b69-9970-9eb88d300409" />
+                    </literalString>
+                  </upperValueInternal>
+                  <elementDefinition Id="0255698d-182f-4fcc-b2ae-598b65012d7c" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="faf55821-2511-4316-8453-b2c7bcee4575" />
+          </association>
+          <association Id="dc0c1aaa-5431-4801-bfc2-e86883a7fe93" isDerived="false" sourceEndRoleName="Hotel" targetEndRoleName="Administrator" isLeaf="false" isAbstract="false">
+            <classMoniker Id="4c6f79b6-62f9-4069-aac6-b52a9bd01a5a" LastKnownName="Administrator" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="1fd423df-b9bb-4200-bd89-60141ca37917" name="Hotel" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="Shared" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="d9c3039c-aa00-4d5b-8f78-0225e6ac3ba7" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="4847f31d-163a-4e5a-a66c-ac8de26d0923" name="Administrator" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <lowerValueInternal>
+                    <literalString Id="83f73073-d98e-42dd-a940-556e73395e6d" name="Lower" value="*">
+                      <elementDefinition Id="b2fea777-2a84-4170-9998-b0eb77c3ca1b" />
+                    </literalString>
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString Id="4dda6bea-5bc0-4529-8535-84a88151b6f0" name="Upper" value="*">
+                      <elementDefinition Id="4e79cd7f-6668-42d4-b328-b0dc27923093" />
+                    </literalString>
+                  </upperValueInternal>
+                  <elementDefinition Id="b231c603-e3fd-4f63-98f3-5694a6796fb9" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="e04da928-74de-47a0-b849-c9a7522c6ea1" />
+          </association>
+          <association Id="9da46925-d6f8-4ced-bd37-3485b410cf27" isDerived="false" sourceEndRoleName="Hotel" targetEndRoleName="Guest" isLeaf="false" isAbstract="false">
+            <classMoniker Id="2fe132eb-9262-446c-8117-6224c1c749f9" LastKnownName="Guest" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="afb4e0a3-67fd-43f1-a360-be388a89ebb7" name="Hotel" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="Shared" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="74194f12-6f85-4305-8fdb-2223a955dbd7" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="2013dfb2-ff5b-4c1f-8023-f093584b2ba0" name="Guest" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <lowerValueInternal>
+                    <literalString Id="5b40a4d6-995f-4731-88d7-45a0c95689c2" name="Lower" value="*">
+                      <elementDefinition Id="874f0385-c4d7-44c9-9a6d-9372743e5efa" />
+                    </literalString>
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString Id="d0fbf99b-54ce-4f5d-a3e0-75998eb3c943" name="Upper" value="*">
+                      <elementDefinition Id="ad4d764f-a761-4ef3-8575-9baedd042489" />
+                    </literalString>
+                  </upperValueInternal>
+                  <elementDefinition Id="2d87d920-df6d-4fd6-aa22-d908ed97843d" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="c8a6a33c-cc1f-4b9a-b49f-218711801a33" />
+          </association>
+        </targetEnds>
+        <ownedOperationsInternal>
+          <operation Id="f3ef1a76-672d-46d8-a99a-e5a68e42fc25" name="Authorization" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="f5eb28c9-00bc-485a-8e0a-f34cf866df68" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="3aae33ff-bedf-4897-a2ab-e633a5e6e337" name="login" direction="In" isUnique="false">
+                  <elementDefinition Id="ca57ae27-5597-4506-b7fa-c7270e334c1c" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="6fe52127-378e-4742-be82-f20b3d2e8fb8" LastKnownName="string" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="cc2e0a18-f56d-47a0-be35-1b793cf29410" name="password" direction="In" isUnique="false">
+                  <elementDefinition Id="a5921d81-3f59-4105-9c7e-a923ea2c020b" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="6fe52127-378e-4742-be82-f20b3d2e8fb8" LastKnownName="string" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="dae144cb-8e23-46da-af16-2db0867f1b30" direction="Return" isUnique="false">
+                  <elementDefinition Id="21551d67-20d7-4359-b7af-601bbb935756" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="a9a9f143-bfef-4584-af5e-2096ab592b32" LastKnownName="User" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="36a34203-5bb3-45a1-bcae-ca0e28a8dce8" name="RegistrationGuest" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="7088177e-6c6a-4cbb-a8a5-604a17932ae4" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="9f2708c5-c454-493f-8f3d-957905092679" name="data" direction="In" isUnique="false">
+                  <elementDefinition Id="a8dbf77e-b2c4-4cc0-96c7-6b2d938982d4" />
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="9298dac7-d6bc-4ed1-9d04-d4cd44fbbd76" name="RegistrationEmployee" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="3051c1f3-2213-4d3b-8d0c-3cefe62b54af" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="37a86058-7f8a-4a0d-ab6a-7c71731af196" name="data" direction="In" isUnique="false">
+                  <elementDefinition Id="34e61ea1-85a6-46f7-9bd9-95716bc7220b" />
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="e07016ff-8e4b-4ec8-8e9b-ce93dc0ab898" name="DataLayer" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="05e2250e-a8c5-4313-9ac3-9852e15e41c3" />
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <packageHasNamedElement>
+      <referencedType Id="6fe52127-378e-4742-be82-f20b3d2e8fb8" name="string" isAbstract="false" isLeaf="false" cachedFullName="string">
+        <elementDefinition Id="5d7352c6-d29d-41ee-ad8c-60f39e750361" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="8db03aa4-a0c9-44cc-add6-8e8adcaa792c" name="int" isAbstract="false" isLeaf="false" cachedFullName="int">
+        <elementDefinition Id="fddd1041-45ee-4cd4-b447-c505e090b16a" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="a9a9f143-bfef-4584-af5e-2096ab592b32" name="User" isAbstract="false" isLeaf="false" cachedFullName="ModelHotel::User">
+        <elementDefinition Id="c646255c-c104-49a9-b833-51e210e30a31" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="c6a8f951-a45e-4cc3-8ce0-171a89754d9f" name="ArrayList" isAbstract="false" isLeaf="false" cachedFullName="ArrayList">
+        <elementDefinition Id="a6c8be53-fd37-4511-b767-08cf1f09137f" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="90dd5b04-90dc-4081-a291-12e722194f1d" name="Arraylist" isAbstract="false" isLeaf="false" cachedFullName="Arraylist">
+        <elementDefinition Id="424fd5f4-9818-4c7a-945e-1a786b915b57" />
+      </referencedType>
+    </packageHasNamedElement>
+  </packagedElements>
+  <package Id="f42144a0-effe-4827-b680-1b884bef67ad" name="ModelHotel">
+    <elementDefinition Id="956efddb-8edc-4918-a23a-ff65ac15a1b4" />
+  </package>
+</logicalClassDesignerModel>
