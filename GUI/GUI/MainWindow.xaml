@@ -6,6 +6,10 @@
     <Window.Background>
         <ImageBrush/>
     </Window.Background>
-    <ScrollViewer x:Name="sc" VerticalScrollBarVisibility="Auto" VerticalContentAlignment="Stretch" HorizontalContentAlignment="Stretch"/>
-
+    <Grid>
+        <Frame Source="HomePage.xaml">
+            
+        </Frame>
+    </Grid>
+   
 </Window>

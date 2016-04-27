@@ -7,12 +7,11 @@ namespace HotelClassLibrary
 {
 	public static class Hotel
 	{
-		static DataLayer data = new DataLayer();
 		public static event EventHandler EnterGuest, EnterEmployee, EnterAdministrator;
 
 		static public void Authorization(string login, string password)
 		{
-			Dictionary<string, object> userInfo = data.GetUserInfo(login, password);
+			Dictionary<string, object> userInfo = DataLayer.GetUserInfo(login, password);
 
 			if(userInfo == null)
 				throw new Exception("Неверный логин и пароль");
@@ -23,7 +22,6 @@ namespace HotelClassLibrary
 					if(EnterGuest!=null)
 					EnterGuest(new Guest
 					(
-						data,
 						(int)userInfo["id"],
 						(int)userInfo["passportNumber"],
 						(int)userInfo["passportSeries"],
@@ -41,7 +39,6 @@ namespace HotelClassLibrary
 				case "employee":
 					EnterEmployee(new Employee
 					(
-						data,
 						(int)userInfo["id"],
 						(int)userInfo["passportNumber"],
 						(int)userInfo["passportSeries"],
@@ -59,7 +56,6 @@ namespace HotelClassLibrary
 				case "admin":
 					EnterAdministrator(new Admin
 					(
-						data,
 						(int)userInfo["id"],
 						(int)userInfo["passportNumber"],
 						(int)userInfo["passportSeries"],
@@ -98,11 +94,11 @@ namespace HotelClassLibrary
 			if(patronymic.Length > 50)
 				throw new Exception("Число знаков в поле \"Отчество\" не может превышать 50");
 
-			return data.AddNewGuest(pasportNumber, pasportSeries, name, surname, patronymic, address, phoneNumber, login, password, citizenship);
+			return DataLayer.AddNewGuest(pasportNumber, pasportSeries, name, surname, patronymic, address, phoneNumber, login, password, citizenship);
 		}
 		static public bool RemoveGuest(int id)
 		{
-			return data.RemoveGuest(id);
+			return DataLayer.RemoveGuest(id);
 		}
 		
 	}

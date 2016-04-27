@@ -8,7 +8,6 @@ namespace HotelClassLibrary
 	public abstract class User
 	{
 		#region Private
-		protected DataLayer data;
 		protected int id;
 		protected int passportNumber;
 		protected int passportSeries;
@@ -70,11 +69,10 @@ namespace HotelClassLibrary
 		#endregion
 
 		public User() { }
-		public User(DataLayer data, int id, int passportNumber, int passportSeries, 
+		public User(int id, int passportNumber, int passportSeries, 
 			string name, string surname, string patronymic, 
 			string address, string phoneNumber, string login, string password)
 		{
-			this.data = data;
 			this.id = id;
 			this.passportNumber = passportNumber;
 			this.passportSeries = passportSeries;

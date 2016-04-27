@@ -99,20 +99,20 @@ namespace HotelClassLibrary
 		}
 
 		public Guest() { }
-		public Guest(DataLayer data, int id, int passportNumber, int passportSeries, string name, string surname, string patronymic,
+		public Guest( int id, int passportNumber, int passportSeries, string name, string surname, string patronymic,
 						string address, string phoneNumber, string login, string password, int citizenship)
-			: base(data, id, passportNumber, passportSeries, name, surname, patronymic, address, phoneNumber, login, password)
+			: base(id, passportNumber, passportSeries, name, surname, patronymic, address, phoneNumber, login, password)
 		{
 			this.citizenship = citizenship;
 		}
 
 		public void BuyARoom(int idRoom, DateTime checkTheDate, DateTime checkOutDate)
 		{
-			data.ByARoom(idRoom, Id, checkTheDate, checkOutDate);
+			DataLayer.ByARoom(idRoom, Id, checkTheDate, checkOutDate);
 		}
 		public void CancelPurchase(int idPurchase)
 		{
-			data.CancelPurchase(idPurchase);
+            DataLayer.CancelPurchase(idPurchase);
 		}
 	}
 }

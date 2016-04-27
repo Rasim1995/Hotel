@@ -9,11 +9,11 @@ using System.Collections;
 
 namespace HotelClassLibrary
 {
-	public class DataLayer
+	public static class DataLayer
 	{
-		string connectionString = @"Data Source=Rasim-PC\SQLEXPRESS; Initial Catalog=HOTEL; Integrated Security=True;";
+		static string connectionString = @"Data Source=Rasim-PC\SQLEXPRESS; Initial Catalog=HOTEL; Integrated Security=True;";
 
-		public Dictionary<string, object> GetUserInfo(string login, string password)
+        public static Dictionary<string, object> GetUserInfo(string login, string password)
 		{
 			Dictionary<string, object> userInfo = null;
 			using(SqlConnection connection = new SqlConnection(connectionString))
@@ -114,8 +114,8 @@ namespace HotelClassLibrary
 				return userInfo;
 			}
 		}
-		
-		public bool AddNewGuest(int pasportNumber, int pasportSeries, string name, string surname, string patronymic,
+
+        public static bool AddNewGuest(int pasportNumber, int pasportSeries, string name, string surname, string patronymic,
 						string address, string phoneNumber, string login, string password, int citizenship)
 		{
 			using(SqlConnection connection = new SqlConnection(connectionString))
@@ -188,7 +188,8 @@ namespace HotelClassLibrary
 			}
 			return true;
 		}
-		internal bool RemoveGuest(int id)
+
+        internal static bool RemoveGuest(int id)
 		{
 			using(SqlConnection connection = new SqlConnection(connectionString))
 			{
@@ -208,7 +209,8 @@ namespace HotelClassLibrary
 			}
 			return true;
 		}
-		public void ByARoom(int idRoom, int idGuest, DateTime checkTheDate, DateTime checkOutDate)
+
+        public static void ByARoom(int idRoom, int idGuest, DateTime checkTheDate, DateTime checkOutDate)
 		{
 			using(SqlConnection connection = new SqlConnection(connectionString))
 			{
@@ -241,7 +243,8 @@ namespace HotelClassLibrary
 				command.ExecuteReader();
 			}
 		}
-		internal void CancelPurchase(int idPurchase)
+
+        internal static void CancelPurchase(int idPurchase)
 		{
 			using(SqlConnection connection = new SqlConnection(connectionString))
 			{
@@ -259,7 +262,8 @@ namespace HotelClassLibrary
 				command.ExecuteReader();
 			}
 		}
-		public ArrayList GetAllRooms()
+
+        public static ArrayList GetAllRooms()
 		{
 			ArrayList listRooms=null;
 			using(SqlConnection connection = new SqlConnection(connectionString))
@@ -273,14 +277,16 @@ namespace HotelClassLibrary
 				if(data.HasRows)
 				{
 					listRooms = new ArrayList();
-					foreach(DbDataRecord d in data)
-						listRooms.Add(d);
+                    foreach (DbDataRecord d in data)
+                        //listRooms.Add(new Room() { Id = d.GetInt32(0), Number = d.GetInt32(1), IdCategory=d.GetInt32(2) });
+                        listRooms.Add(d);
 				}
 
 			}
 			return listRooms;
 		}
-		public ArrayList GetPurchases(int idKlient)
+
+        public static ArrayList GetPurchases(int idKlient)
 		{
 			ArrayList listRooms = null;
 			using(SqlConnection connection = new SqlConnection(connectionString))
@@ -308,5 +314,28 @@ namespace HotelClassLibrary
 			}
 			return listRooms;
 		}
+
+        public static ArrayList GetAllCategories()
+        {
+            ArrayList allCategories=null;
+            ArrayList l = new ArrayList();
+            
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                SqlCommand command = new SqlCommand("Select * from Categories", connection);
+                command.CommandType = CommandType.Text;
+
+                connection.Open();
+                SqlDataReader data = command.ExecuteReader();
+
+                if (data.HasRows)
+                {
+                    allCategories = new ArrayList();
+                    foreach (DbDataRecord d in data)
+                        allCategories.Add(d);
+                }
+            }
+            return allCategories;
+        }
 	}
 }

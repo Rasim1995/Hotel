@@ -96,9 +96,9 @@ namespace HotelClassLibrary
 			set { password = value; }
 		}
 
-		public Admin(DataLayer data, int id, int passportNumber, int passportSeries, string name, string surname, string patronymic,
+		public Admin(int id, int passportNumber, int passportSeries, string name, string surname, string patronymic,
 						string address, string phoneNumber, string login, string password)
-			: base(data, id, passportNumber, passportSeries, name, surname, patronymic, address, phoneNumber, login, password)
+			: base(id, passportNumber, passportSeries, name, surname, patronymic, address, phoneNumber, login, password)
 		{ }
 	}
 }

@@ -7,11 +7,11 @@ using HotelClassLibrary;
 
 namespace Debug
 {
-	class Program
+	public class Program
 	{
 		static void Main(string[] args)
 		{
-			DataLayer data = new DataLayer();
+			
 			
 			try
 			{
@@ -32,5 +32,10 @@ namespace Debug
 				Console.WriteLine(item.Key + ": " + item.Value);
 			}
 		}
+
+        public static void Print(string text)
+        {
+            Console.WriteLine(text);
+        }
 	}
 }

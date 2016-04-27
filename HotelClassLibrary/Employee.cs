@@ -99,9 +99,9 @@ namespace HotelClassLibrary
 			get { return post; }
 			set { post = value; }
 		}
-		public Employee(DataLayer data, int id, int passportNumber, int passportSeries, string name, string surname, string patronymic,
+		public Employee(int id, int passportNumber, int passportSeries, string name, string surname, string patronymic,
 						string address, string phoneNumber, string login, string password, int post)
-			: base(data, id, passportNumber, passportSeries, name, surname, patronymic, address, phoneNumber, login, password)
+			: base(id, passportNumber, passportSeries, name, surname, patronymic, address, phoneNumber, login, password)
 		{
 			this.post = post;
 		}

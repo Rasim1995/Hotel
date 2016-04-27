@@ -20,15 +20,10 @@ namespace GUI
     /// </summary>
     public partial class MainWindow : Window
     {
+        
         public MainWindow()
         {
             InitializeComponent();
-            HomeControl h = new HomeControl();
-            this.sc.Content = h;
-			
-            //UserControl1 u = new UserControl1();
-            //Content = u;
-
         }
     }
 }
